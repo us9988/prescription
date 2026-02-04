@@ -27,8 +27,10 @@ class ScanViewModel @Inject constructor(
 
     fun onIntent(intent: ScanIntent) {
         when (intent) {
-            is ScanIntent.TakePhoto -> { /* 카메라 런처는 Screen에서 처리 */ }
-            is ScanIntent.PickFromGallery -> { /* 갤러리 런처는 Screen에서 처리 */ }
+            is ScanIntent.TakePhoto -> { /* 카메라 런처는 Screen에서 처리 */
+            }
+            is ScanIntent.PickFromGallery -> { /* 갤러리 런처는 Screen에서 처리 */
+            }
             is ScanIntent.ImageSelected -> {
                 _state.update { it.copy(imageUri = intent.uri, phase = ScanPhase.ImageReady, errorMessage = null) }
                 analyzeImage(intent.uri)
@@ -49,14 +51,13 @@ class ScanViewModel @Inject constructor(
     private fun analyzeImage(uri: Uri) {
         viewModelScope.launch {
             _state.update { it.copy(phase = ScanPhase.Analyzing, errorMessage = null) }
-
             val result = repository.analyzePrescription(uri)
             result.onSuccess { response ->
                 Log.d(TAG, "분석 성공: $response")
-                _state.update { it.copy(phase = ScanPhase.Result, analysisResult = response.toString()) }
+                _state.update { it.copy(phase = ScanPhase.Result, analysisResult = response) }
             }.onFailure { e ->
                 Log.e(TAG, "분석 실패", e)
-                _state.update { it.copy(phase = ScanPhase.ImageReady, errorMessage = "분석 실패: ${e.message}") }
+                _state.update { it.copy(phase = ScanPhase.Result, errorMessage = "분석 실패: ${e.message}") }
             }
         }
     }

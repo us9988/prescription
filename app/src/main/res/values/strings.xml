@@ -1,3 +1,48 @@
 <resources>
     <string name="app_name">Prescription App</string>
+
+    <string name="scan_select_header">문서 스캔</string>
+    <string name="scan_select_title">문서를 등록해주세요</string>
+    <string name="scan_select_hint">처방전 또는 시술 안내문을 촬영하거나\n앨범에서 선택하세요</string>
+
+    <!-- 스캔 선택 화면 -->
+    <string name="scan_select_camera_title">카메라로 촬영</string>
+    <string name="scan_select_camera_hint">지금 바로 문서를 촬영해요</string>
+    <string name="scan_select_album_title">앨범에서 선택</string>
+    <string name="scan_select_album_hint">저장된 사진을 불러와요</string>
+
+    <!-- 스캔 분석 중 화면 -->
+    <string name="scan_analyze_title">분석 중이에요</string>
+    <string name="scan_analyze_hint">AI가 문서를 읽고 있어요</string>
+
+    <!-- 스캔 결과 화면 -->
+    <string name="scan_analysis_success">분석 완료</string>
+    <string name="scan_analysis_success_hint">%1$s을 인식했어요</string>
+
+    <string name="scan_info_title">인식된 정보</string>
+    <string name="scan_info_hospital">병원</string>
+    <string name="scan_info_patient">환자</string>
+    <string name="scan_info_treatment">시술/치료</string>
+    <string name="scan_info_date">날짜</string>
+    
+    <string name="scan_medication_title">복약 정보</string>
+    <string name="scan_medication_hint">용법이 알맞게 분석되었는지 확인해주세요</string>
+    <string name="scan_medication_item_default_title">약품명 없음</string>
+    <string name="scan_medication_item_hint">1일 %1$d회 %2$d정</string>
+    <string name="scan_medication_item_default_hint">용법을 등록해주세요</string>
+    <string name="scan_medication_item_duration">%1$d일</string>
+
+    <string name="scan_care_title">케어 일정</string>
+    <string name="scan_care_item_default_title">제목 없음</string>
+    <string name="scan_care_item_hint">D+%1$s ~ D+%2$s</string>
+
+    <string name="scan_appointment_title">다음 방문</string>
+    <string name="scan_appointment_item_day_info">D+%1$s</string>
+
+    <string name="scan_memo_title">기타 안내</string>
+
+
+
+
+
 </resources>
