@@ -62,8 +62,8 @@ fun ScanScreen(viewModel: ScanViewModel = hiltViewModel()) {
         }
         ScanPhase.Result -> {
             val result = state.analysisResult
-            if (result == null) {
-
+            if (result == null || result.documentType == -1) {
+                ScanErrorScreen()
             } else {
                 Log.e("ScanScreen", "Result: $result")
                 ScanResultScreen(result)

@@ -17,7 +17,9 @@
 
     <!-- 스캔 결과 화면 -->
     <string name="scan_analysis_success">분석 완료</string>
+    <string name="scan_analysis_error">인식 실패</string>
     <string name="scan_analysis_success_hint">%1$s을 인식했어요</string>
+    <string name="scan_analysis_error_hint">문서를 읽을 수 없어요</string>
 
     <string name="scan_info_title">인식된 정보</string>
     <string name="scan_info_hospital">병원</string>
@@ -40,6 +42,11 @@
     <string name="scan_appointment_item_day_info">D+%1$s</string>
 
     <string name="scan_memo_title">기타 안내</string>
+    
+    <string name="scan_error_title">확인해주세요</string>
+    <string name="scan_error_item_1">처방전 또는 안내문이 맞나요?</string>
+    <string name="scan_error_item_2">글자가 선명하게 보이나요?</string>
+    <string name="scan_error_item_3">문서 전체가 나오나요?</string>
 
 
 

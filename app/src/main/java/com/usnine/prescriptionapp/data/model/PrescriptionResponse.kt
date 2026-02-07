@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName
 
 data class PrescriptionResponse(
     /**
-     * 0 = 처방전, 1 = 시술 안내문, 2 = 검사 안내문, 3 = 기타
+     * 0 = 처방전, 1 = 시술 안내문, 2 = 검사 안내문, 3 = 기타、 －１ ＝ 실패
      */
     @SerializedName("document_type")
     val documentType: Int,

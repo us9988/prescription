@@ -60,7 +60,7 @@ fun ScanResultScreen(
 }
 
 @Composable
-fun ResultHeader(label: String) {
+private fun ResultHeader(label: String) {
     Box(
         modifier = Modifier
             .fillMaxWidth()
@@ -83,7 +83,7 @@ fun ResultHeader(label: String) {
 }
 
 @Composable
-fun InfoSection(result: PrescriptionResponse) {
+private fun InfoSection(result: PrescriptionResponse) {
     SectionCard(
         stringResource(R.string.scan_info_title),
         null,
@@ -157,7 +157,7 @@ private fun MemoSection(memo: String) {
 
 
 @Composable
-fun InfoRow(label: String, value: String, showBottomDivider: Boolean = true) {
+private fun InfoRow(label: String, value: String, showBottomDivider: Boolean = true) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
@@ -192,13 +192,12 @@ private fun ResultItem(
         Column(modifier = Modifier.weight(1f)) {
             Text(title, TextType.BODY_MEDIUM, textAlign = TextAlign.Start)
             if (hint.isNotEmpty()) {
-                Spacer(Modifier.height(12.dp))
+                VerticalSpacer(12.dp)
                 Text(hint, TextType.HINT_MEDIUM)
             }
         }
         HorizontalSpacer()
         dayInfo?.let { Text(it, TextType.TITLE_SMALL, color = Blue) }
-
 
     }
 }

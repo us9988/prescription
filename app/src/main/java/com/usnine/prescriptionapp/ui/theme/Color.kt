@@ -14,3 +14,4 @@ val Blue = Color(0xFF3182F6)
 val HintGray = Color(0xFF8B8B8B)
 
 val Green = Color(0xFF10B981)
+val Red = Color(0xFFEF4444)
